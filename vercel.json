@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "dist",
+  "builds": [
+    {
+      "src": "dist/server/vercel-build.mjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/dist/server/vercel-build.mjs"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/server/vercel-build.mjs"
+    }
+  ],
+  "functions": {
+    "dist/server/vercel-build.mjs": {
+      "maxDuration": 30
+    }
+  }
+} 
