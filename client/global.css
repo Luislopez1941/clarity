@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 220 15% 97%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    --primary: 200 92% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 15% 12%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 180 100% 96%;
+    --accent-foreground: 200 92% 45%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 200 92% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 25% 15%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 200 92% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 20%;
+    --sidebar-accent-foreground: 220 15% 85%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 200 92% 45%;
+
+    /* Clarity specific variables */
+    --clarity-primary: 200 92% 45%;
+    --clarity-secondary: 180 65% 35%;
+    --clarity-accent: 160 85% 60%;
+    --clarity-surface: 220 15% 98%;
+    --clarity-surface-elevated: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 15% 92%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 15% 92%;
+
+    --primary: 200 92% 55%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 220 15% 92%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 220 25% 18%;
+    --accent-foreground: 200 92% 55%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 220 25% 8%;
+
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 200 92% 55%;
+
+    --sidebar-background: 220 30% 5%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 200 92% 55%;
+    --sidebar-primary-foreground: 220 30% 5%;
+    --sidebar-accent: 220 30% 10%;
+    --sidebar-accent-foreground: 220 15% 85%;
+    --sidebar-border: 220 30% 15%;
+    --sidebar-ring: 200 92% 55%;
+
+    /* Clarity specific variables for dark mode */
+    --clarity-primary: 200 92% 55%;
+    --clarity-secondary: 180 65% 45%;
+    --clarity-accent: 160 85% 70%;
+    --clarity-surface: 220 25% 10%;
+    --clarity-surface-elevated: 220 25% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
